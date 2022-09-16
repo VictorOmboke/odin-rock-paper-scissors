@@ -11,8 +11,8 @@ function getComputerChoice() {
     } else {
         return "Scissors";
     }
-    console.log(getComputerChoice());
 }
+console.log(getComputerChoice());
 
 function rockPaperScissors(playerSelection, computerSelection) {
 
