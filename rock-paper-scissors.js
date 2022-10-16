@@ -41,19 +41,35 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 1; i < 6; i++) {
-        const playerSelection = prompt("Please type 'Rock', 'Paper', or 'Scissors'!", "Rock").toLowerCase();
-        const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
-        console.log(`Round: ${i}`)
-        console.log(`Your choice: ${playerSelection}`);
-        console.log(`Computers choice: ${computerSelection}`);
-        console.log(`Result: ${playRound(playerSelection, computerSelection)}`);;
-    }
-    console.log(`Final results: Wins: ${playerScore / 2} -- Losses: ${computerScore / 2} -- Ties: ${tieScore / 2}`);
-    console.log("Thanks for playing! To play again refresh the page!");
-}
+// function game() {
+//     for (let i = 1; i < 6; i++) {
+//         const playerSelection = prompt("Please type 'Rock', 'Paper', or 'Scissors'!", "Rock").toLowerCase();
+//         const computerSelection = getComputerChoice();
+//         playRound(playerSelection, computerSelection);
+//         console.log(`Round: ${i}`)
+//         console.log(`Your choice: ${playerSelection}`);
+//         console.log(`Computers choice: ${computerSelection}`);
+//         console.log(`Result: ${playRound(playerSelection, computerSelection)}`);;
+//     }
+//     console.log(`Final results: Wins: ${playerScore / 2} -- Losses: ${computerScore / 2} -- Ties: ${tieScore / 2}`);
+//     console.log("Thanks for playing! To play again refresh the page!");
+// }
 
-game();
+// game();
 
+const container = document.querySelector('#container');
+
+const rock = document.createElement('button');
+rock.classList.add('rock');
+rock.textContent = 'Rock';
+container.appendChild(rock);
+
+const paper = document.createElement('button');
+paper.classList.add('paper');
+paper.textContent = 'Paper';
+container.appendChild(paper);
+
+const scissors = document.createElement('button');
+scissors.classList.add('scissors');
+scissors.textContent = 'Scissors';
+container.appendChild(scissors);
