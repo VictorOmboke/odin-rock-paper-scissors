@@ -12,8 +12,6 @@ function getComputerChoice() {
     }
 }
 
-const playerSelection = prompt("Please type 'Rock', 'Paper', or 'Scissors'!", "Rock").toLowerCase();
-const computerSelection = getComputerChoice();
 let playerScore = 0;
 let computerScore = 0;
 let tieScore = 0;
