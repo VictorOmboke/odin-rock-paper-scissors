@@ -12,9 +12,17 @@ function getComputerChoice() {
     }
 }
 
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+const buttons = document.querySelectorAll('button');
+
+let playerSelection = '';
+const computerSelection = getComputerChoice();
 let playerScore = 0;
 let computerScore = 0;
 let tieScore = 0;
+
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
@@ -40,6 +48,27 @@ function playRound(playerSelection, computerSelection) {
         return "You win, scissors beats paper!";
     }
 }
+
+rock.addEventListener('click', () => {
+    playerSelection = 'rock';
+    console.log(`Your choice: ${playerSelection}`);
+    console.log(`Computers choice: ${computerSelection}`);
+    console.log(`Result: ${playRound(playerSelection, computerSelection)}`);
+});
+
+paper.addEventListener('click', () => {
+    playerSelection = 'paper';
+    console.log(`Your choice: ${playerSelection}`);
+    console.log(`Computers choice: ${computerSelection}`);
+    console.log(`Result: ${playRound(playerSelection, computerSelection)}`);
+});
+
+scissors.addEventListener('click', () => {
+    playerSelection = 'scissors';
+    console.log(`Your choice: ${playerSelection}`);
+    console.log(`Computers choice: ${computerSelection}`);
+    console.log(`Result: ${playRound(playerSelection, computerSelection)}`);
+});
 
 // function game() {
 //     for (let i = 1; i < 6; i++) {
