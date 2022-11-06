@@ -54,6 +54,7 @@ rock.addEventListener('click', () => {
     console.log(`Your choice: ${playerSelection}`);
     console.log(`Computers choice: ${computerSelection}`);
     console.log(`Result: ${playRound(playerSelection, computerSelection)}`);
+    console.log(`Final results: Wins: ${playerScore} -- Losses: ${computerScore} -- Ties: ${tieScore}`);
 });
 
 paper.addEventListener('click', () => {
@@ -61,6 +62,7 @@ paper.addEventListener('click', () => {
     console.log(`Your choice: ${playerSelection}`);
     console.log(`Computers choice: ${computerSelection}`);
     console.log(`Result: ${playRound(playerSelection, computerSelection)}`);
+    console.log(`Final results: Wins: ${playerScore} -- Losses: ${computerScore} -- Ties: ${tieScore}`);
 });
 
 scissors.addEventListener('click', () => {
@@ -68,6 +70,7 @@ scissors.addEventListener('click', () => {
     console.log(`Your choice: ${playerSelection}`);
     console.log(`Computers choice: ${computerSelection}`);
     console.log(`Result: ${playRound(playerSelection, computerSelection)}`);
+    console.log(`Final results: Wins: ${playerScore} -- Losses: ${computerScore} -- Ties: ${tieScore}`);
 });
 
 // function game() {
