@@ -12,20 +12,13 @@ function getComputerChoice() {
     }
 }
 
-const rock = document.querySelector('.rock');
-const paper = document.querySelector('.paper');
-const scissors = document.querySelector('.scissors');
-const buttons = document.querySelectorAll('button');
-
 let playerSelection = '';
 let computerSelection = '';
 let playerScore = 0;
 let computerScore = 0;
-let tieScore = 0;
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        tieScore++;
         return "Looks like a tie, try again!";
     } else if (playerSelection == "rock" && computerSelection == "paper") {
         computerScore++;
@@ -48,6 +41,15 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+const buttons = document.querySelectorAll('button');
+const results = document.querySelector('#results');
+const pScore = document.querySelector('#player-score');
+const cScore = document.querySelector('#computer-score')
+
+
 rock.addEventListener('click', () => {
     playerSelection = 'rock';
     computerSelection = getComputerChoice();
@@ -65,14 +67,16 @@ scissors.addEventListener('click', () => {
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(`Your choice: ${playerSelection}`);
-        console.log(`Computers choice: ${computerSelection}`);
-        console.log(`Result: ${playRound(playerSelection, computerSelection)}`);
-        console.log(`Final results: Wins: ${playerScore} -- Losses: ${computerScore}`);
+        pScore.textContent = `${playerScore}`;
+        cScore.textContent = `${computerScore}`;
+        results.textContent = `${playRound(playerSelection, computerSelection)}`;
+        // console.log(`Final results: Wins: ${playerScore} -- Losses: ${computerScore}`);
     });
 });
 
-const results = document.querySelector('#results');
+
+
+
 
 
 
