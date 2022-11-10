@@ -21,22 +21,22 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "Looks like a tie, try again!";
     } else if (playerSelection == "rock" && computerSelection == "paper") {
-        computerScore++;
+        ++computerScore;
         return "You lose, paper beats rock!";
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
-        playerScore++;
+        ++playerScore;
         return "You win, rock beats Scissors!";
     } else if (playerSelection == "paper" && computerSelection == "rock") {
-        playerScore++;
+        ++playerScore;
         return "You win, paper beats rock!";
     } else if (playerSelection == "paper" && computerSelection == "scissors") {
-        computerScore++;
+        ++computerScore;
         return "You lose, Scissors beats paper!";
     } else if (playerSelection == "scissors" && computerSelection == "rock") {
-        computerScore++;
+        ++computerScore;
         return "You lose, Rock beats scissors!";
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        playerScore++;
+        ++playerScore;
         return "You win, scissors beats paper!";
     }
 }
@@ -67,9 +67,9 @@ scissors.addEventListener('click', () => {
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        results.textContent = `${playRound(playerSelection, computerSelection)}`;
         pScore.textContent = `${playerScore}`;
         cScore.textContent = `${computerScore}`;
-        results.textContent = `${playRound(playerSelection, computerSelection)}`;
         // console.log(`Final results: Wins: ${playerScore} -- Losses: ${computerScore}`);
     });
 });
