@@ -66,6 +66,7 @@ const rps = document.querySelector('#rps-round');
 const winner = document.querySelector('#winner');
 const pScore = document.querySelector('#player-score');
 const cScore = document.querySelector('#computer-score');
+const reset = document.querySelector('#reset');
 
 
 rock.addEventListener('click', () => {
@@ -83,6 +84,10 @@ scissors.addEventListener('click', () => {
     computerSelection = getComputerChoice();
 });
 
+reset.addEventListener('click', () => {
+    location.reload();
+})
+
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         gameOver();
@@ -92,6 +97,7 @@ buttons.forEach((button) => {
         cScore.textContent = computerScore;
     });
 });
+
 
 
 
