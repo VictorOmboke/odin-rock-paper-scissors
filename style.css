@@ -5,8 +5,41 @@ html {
     color: white;
 }
 
+h1 {
+    font-size: 90px;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+h4 {
+    font-size: 30px;
+    margin: 10px 0px;
+}
+
+#player-score,
+#computer-score {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 50px;
 }
