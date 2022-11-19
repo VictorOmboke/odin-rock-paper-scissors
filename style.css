@@ -71,6 +71,7 @@ button::after {
 #results {
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
