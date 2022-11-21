@@ -107,22 +107,4 @@ buttons.forEach((button) => {
 
 
 
-// function game() {
-//     for (let i = 1; i < 6; i++) {
-//         const playerSelection = prompt("Please type 'Rock', 'Paper', or 'Scissors'!", "Rock").toLowerCase();
-//         const computerSelection = getComputerChoice();
-//         playRound(playerSelection, computerSelection);
-//         console.log(`Round: ${i}`)
-//         console.log(`Your choice: ${playerSelection}`);
-//         console.log(`Computers choice: ${computerSelection}`);
-//         console.log(`Result: ${playRound(playerSelection, computerSelection)}`);;
-//     }
-//     console.log(`Final results: Wins: ${playerScore / 2} -- Losses: ${computerScore / 2} -- Ties: ${tieScore / 2}`);
-//     console.log("Thanks for playing! To play again refresh the page!");
-// }
-
-// game();
-
-
-
 
